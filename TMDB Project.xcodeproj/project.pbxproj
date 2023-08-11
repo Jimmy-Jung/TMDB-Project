@@ -20,6 +20,10 @@
 		553DBBA82A864183000ACEFA /* Trending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBBA72A864183000ACEFA /* Trending.swift */; };
 		553DBBAB2A8643DC000ACEFA /* TMDB_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBBAA2A8643DC000ACEFA /* TMDB_API.swift */; };
 		553DBBAD2A864B82000ACEFA /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBBAC2A864B82000ACEFA /* Credits.swift */; };
+		553DBBB12A86563B000ACEFA /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBBAF2A86563B000ACEFA /* MovieCollectionViewCell.swift */; };
+		553DBBB22A86563B000ACEFA /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553DBBB02A86563B000ACEFA /* MovieCollectionViewCell.xib */; };
+		553DBBB52A865DF2000ACEFA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 553DBBB42A865DF2000ACEFA /* Kingfisher */; };
+		553DBBB82A86625B000ACEFA /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBBB72A86625B000ACEFA /* ReusableViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,9 @@
 		553DBBA72A864183000ACEFA /* Trending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trending.swift; sourceTree = "<group>"; };
 		553DBBAA2A8643DC000ACEFA /* TMDB_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDB_API.swift; sourceTree = "<group>"; };
 		553DBBAC2A864B82000ACEFA /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
+		553DBBAF2A86563B000ACEFA /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		553DBBB02A86563B000ACEFA /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		553DBBB72A86625B000ACEFA /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553DBBB52A865DF2000ACEFA /* Kingfisher in Frameworks */,
 				553DBBA52A862A03000ACEFA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,12 +78,14 @@
 		553DBB842A862742000ACEFA /* TMDB Project */ = {
 			isa = PBXGroup;
 			children = (
+				553DBBB62A8661FF000ACEFA /* New Group */,
 				553DBB8E2A862744000ACEFA /* Assets.xcassets */,
 				553DBB932A862744000ACEFA /* Info.plist */,
 				553DBB992A862752000ACEFA /* App */,
 				553DBBA92A8643C3000ACEFA /* Extension */,
 				553DBBA02A86297A000ACEFA /* APIKEY */,
-				553DBBA62A864108000ACEFA /* Model */,
+				553DBBA62A864108000ACEFA /* Models */,
+				553DBBAE2A86521D000ACEFA /* Network */,
 				553DBB9A2A862761000ACEFA /* View */,
 				553DBB9B2A862767000ACEFA /* ViewController */,
 			);
@@ -96,6 +106,8 @@
 			children = (
 				553DBB8B2A862742000ACEFA /* Main.storyboard */,
 				553DBB902A862744000ACEFA /* LaunchScreen.storyboard */,
+				553DBBAF2A86563B000ACEFA /* MovieCollectionViewCell.swift */,
+				553DBBB02A86563B000ACEFA /* MovieCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				553DBB892A862742000ACEFA /* ViewController.swift */,
-				553DBBA12A8629B0000ACEFA /* TMDBNetworkManager.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -118,21 +129,37 @@
 			path = APIKEY;
 			sourceTree = "<group>";
 		};
-		553DBBA62A864108000ACEFA /* Model */ = {
+		553DBBA62A864108000ACEFA /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				553DBBA72A864183000ACEFA /* Trending.swift */,
 				553DBBAC2A864B82000ACEFA /* Credits.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		553DBBA92A8643C3000ACEFA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				553DBBAA2A8643DC000ACEFA /* TMDB_API.swift */,
+				553DBBB72A86625B000ACEFA /* ReusableViewProtocol.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		553DBBAE2A86521D000ACEFA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				553DBBAA2A8643DC000ACEFA /* TMDB_API.swift */,
+				553DBBA12A8629B0000ACEFA /* TMDBNetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		553DBBB62A8661FF000ACEFA /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +180,7 @@
 			name = "TMDB Project";
 			packageProductDependencies = (
 				553DBBA42A862A03000ACEFA /* Alamofire */,
+				553DBBB42A865DF2000ACEFA /* Kingfisher */,
 			);
 			productName = "TMDB Project";
 			productReference = 553DBB822A862742000ACEFA /* TMDB Project.app */;
@@ -184,6 +212,7 @@
 			mainGroup = 553DBB792A862742000ACEFA;
 			packageReferences = (
 				553DBBA32A862A03000ACEFA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				553DBBB32A865DF2000ACEFA /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 553DBB832A862742000ACEFA /* Products */;
 			projectDirPath = "";
@@ -199,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553DBBB22A86563B000ACEFA /* MovieCollectionViewCell.xib in Resources */,
 				553DBB9D2A862904000ACEFA /* .gitignore in Resources */,
 				553DBB922A862744000ACEFA /* LaunchScreen.storyboard in Resources */,
 				553DBB8F2A862744000ACEFA /* Assets.xcassets in Resources */,
@@ -214,11 +244,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				553DBBA82A864183000ACEFA /* Trending.swift in Sources */,
+				553DBBB82A86625B000ACEFA /* ReusableViewProtocol.swift in Sources */,
 				553DBB8A2A862742000ACEFA /* ViewController.swift in Sources */,
 				553DBB862A862742000ACEFA /* AppDelegate.swift in Sources */,
 				553DBBA22A8629B0000ACEFA /* TMDBNetworkManager.swift in Sources */,
 				553DBB9F2A86294A000ACEFA /* APIKEY.swift in Sources */,
 				553DBBAB2A8643DC000ACEFA /* TMDB_API.swift in Sources */,
+				553DBBB12A86563B000ACEFA /* MovieCollectionViewCell.swift in Sources */,
 				553DBBAD2A864B82000ACEFA /* Credits.swift in Sources */,
 				553DBB882A862742000ACEFA /* SceneDelegate.swift in Sources */,
 			);
@@ -448,6 +480,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		553DBBB32A865DF2000ACEFA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -455,6 +495,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 553DBBA32A862A03000ACEFA /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		553DBBB42A865DF2000ACEFA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 553DBBB32A865DF2000ACEFA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
