@@ -13,6 +13,7 @@
 		553DBB8D2A862742000ACEFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553DBB8B2A862742000ACEFA /* Main.storyboard */; };
 		553DBB8F2A862744000ACEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553DBB8E2A862744000ACEFA /* Assets.xcassets */; };
 		553DBB922A862744000ACEFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553DBB902A862744000ACEFA /* LaunchScreen.storyboard */; };
+		553DBB9D2A862904000ACEFA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 553DBB9C2A862904000ACEFA /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		553DBB8E2A862744000ACEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		553DBB912A862744000ACEFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		553DBB932A862744000ACEFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		553DBB9C2A862904000ACEFA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		553DBB842A862742000ACEFA /* TMDB Project */ = {
 			isa = PBXGroup;
 			children = (
-				553DBB852A862742000ACEFA /* AppDelegate.swift */,
-				553DBB872A862742000ACEFA /* SceneDelegate.swift */,
-				553DBB892A862742000ACEFA /* ViewController.swift */,
-				553DBB8B2A862742000ACEFA /* Main.storyboard */,
 				553DBB8E2A862744000ACEFA /* Assets.xcassets */,
-				553DBB902A862744000ACEFA /* LaunchScreen.storyboard */,
 				553DBB932A862744000ACEFA /* Info.plist */,
+				553DBB992A862752000ACEFA /* App */,
+				553DBB9A2A862761000ACEFA /* View */,
+				553DBB9B2A862767000ACEFA /* ViewController */,
+				553DBB9C2A862904000ACEFA /* .gitignore */,
 			);
 			path = "TMDB Project";
+			sourceTree = "<group>";
+		};
+		553DBB992A862752000ACEFA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				553DBB852A862742000ACEFA /* AppDelegate.swift */,
+				553DBB872A862742000ACEFA /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		553DBB9A2A862761000ACEFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				553DBB8B2A862742000ACEFA /* Main.storyboard */,
+				553DBB902A862744000ACEFA /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		553DBB9B2A862767000ACEFA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				553DBB892A862742000ACEFA /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553DBB9D2A862904000ACEFA /* .gitignore in Resources */,
 				553DBB922A862744000ACEFA /* LaunchScreen.storyboard in Resources */,
 				553DBB8F2A862744000ACEFA /* Assets.xcassets in Resources */,
 				553DBB8D2A862742000ACEFA /* Main.storyboard in Resources */,
