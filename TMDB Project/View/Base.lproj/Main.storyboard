@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Movie View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TMDB_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MovieViewController" customModule="TMDB_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,11 +21,31 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rcn-Ae-glz">
                                     <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="45"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCollectionReusableView" id="uJq-Xh-v2E" customClass="MovieCollectionReusableView" customModule="TMDB_Project" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="45"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMd-zV-9kE">
+                                            <rect key="frame" x="38" y="8" width="387" height="29"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dMd-zV-9kE" firstAttribute="top" secondItem="uJq-Xh-v2E" secondAttribute="topMargin" id="Ian-b9-dN0"/>
+                                        <constraint firstItem="dMd-zV-9kE" firstAttribute="leading" secondItem="uJq-Xh-v2E" secondAttribute="leadingMargin" constant="30" id="Lik-jP-gOt"/>
+                                        <constraint firstItem="dMd-zV-9kE" firstAttribute="trailing" secondItem="uJq-Xh-v2E" secondAttribute="trailingMargin" constant="40" id="OCr-OA-LPZ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dMd-zV-9kE" secondAttribute="bottom" id="glX-mP-6Gq"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="dMd-zV-9kE" id="bti-Zx-zl0"/>
+                                    </connections>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -41,6 +61,9 @@
                         <barButtonItem key="leftBarButtonItem" image="list.bullet" catalog="system" id="6om-b7-WwW"/>
                         <barButtonItem key="rightBarButtonItem" image="magnifyingglass" catalog="system" id="iqM-iG-gBB"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="movieCollectionView" destination="xa2-sk-UuS" id="8wS-Qy-Y5b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

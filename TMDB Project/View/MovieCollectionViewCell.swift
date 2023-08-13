@@ -9,20 +9,21 @@ import UIKit
 import Kingfisher
 
 final class MovieCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var secondaryLabel: UILabel!
-    @IBOutlet weak var rateLabel: UILabel!
+    @IBOutlet private weak var backView: UIView!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var rateLabel: UILabel!
     
     var movieInfo: MovieInfo? {
         didSet {
-            guard let path = movieInfo?.posterPath else {
+            titleLabel.text = movieInfo?.title
+            rateLabel.text = String(format: "%.1f", movieInfo?.vote_average ?? 0)
+            guard let path = movieInfo?.poster_path else {
                 imageView.image = UIImage(named: "noPoster")
                 return
             }
             let url = TMDB_API.imageURL(
-                width: Int(imageView.frame.width),
+                width: 300,
                 path: path
             )
             self.imageView.kf.setImage(with: url)
@@ -34,12 +35,25 @@ final class MovieCollectionViewCell: UICollectionViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        backView.layer.cornerRadius = 10
-        backView.clipsToBounds = true
+        backView.layer.cornerRadius = 20
+        backView.layer.masksToBounds = true
+        makeShadow()
     }
     
-    @IBAction func clipButtonTapped(_ sender: Any) {
+    private func makeShadow() {
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.label.cgColor
+        layer.shadowOpacity = 0.5
+        layer.shadowRadius = 8
+        layer.shadowOffset = CGSize(width: 1, height: 1)
     }
     
+    @IBAction private func clipButtonTapped(_ sender: Any) {
+    }
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        if #available(iOS 13, *), self.traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            layer.shadowColor = UIColor.label.cgColor
+            }
+    }
 
 }

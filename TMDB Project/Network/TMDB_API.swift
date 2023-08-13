@@ -12,7 +12,7 @@ enum TMDB_API {
     //    Credits: "https://api.themoviedb.org/3/movie/\(movieID)/credits"
     static private let baseURL = "https://api.themoviedb.org/3/"
     static func imageURL(width: Int, path: String) -> URL? {
-        return URL(string: "https://image.tmdb.org/t/p/\(width)/\(path)")
+        return URL(string: "https://image.tmdb.org/t/p/w\(width)\(path)")
     }
     
     enum Trending {
