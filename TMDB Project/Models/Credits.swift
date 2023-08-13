@@ -17,28 +17,14 @@ struct Credits: Codable {
 struct Cast: Codable {
     let adult: Bool?
     let gender, id: Int?
-    let knownForDepartment: Department?
-    let name, originalName: String?
+    let known_for_department: String?
+    let name, original_name: String?
     let popularity: Double?
-    let profilePath: String?
-    let castID: Int?
-    let character, creditID: String?
+    let profile_path: String?
+    let cast_id: Int?
+    let character, credit_id: String?
     let order: Int?
-    let department: Department?
+    let department: String?
     let job: String?
 }
 
-enum Department: String, Codable {
-    case acting
-    case art
-    case camera
-    case costumeMakeUp
-    case crew
-    case directing
-    case editing
-    case lighting
-    case production
-    case sound
-    case visualEffects
-    case writing
-}

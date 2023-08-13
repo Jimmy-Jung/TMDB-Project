@@ -8,19 +8,20 @@
 import UIKit
 
 final class MovieViewController: UIViewController {
-
+    private let titleText = "TMDB"
     @IBOutlet weak var movieCollectionView: UICollectionView!
     
     private var movieList: [MovieInfo] = []
-    let networkManager = TMDBNetworkManager.shared
+    private let networkManager = TMDBNetworkManager.shared
     override func viewDidLoad() {
         super.viewDidLoad()
+        configBackBarButton(title: nil)
         setupCollectionView()
         configCollectionView()
-        request()
+        callRequest()
     }
     
-    private func request() {
+    private func callRequest() {
         networkManager.requestTrending(period: .week) { [weak self] list in
             self?.movieList.append(contentsOf: list)
             self?.movieCollectionView.reloadData()
@@ -32,8 +33,6 @@ final class MovieViewController: UIViewController {
         movieCollectionView.dataSource = self
         let nib = UINib(nibName: MovieCollectionViewCell.identifier, bundle: nil)
         movieCollectionView.register(nib, forCellWithReuseIdentifier: MovieCollectionViewCell.identifier)
-//        let herderViewNib = UINib(nibName: "MovieCollectionReusableView", bundle: nil)
-//        movieCollectionView.register(herderViewNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "MovieCollectionReusableView")
     }
     
     private func configCollectionView() {
@@ -66,8 +65,16 @@ extension MovieViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: CreditViewController.identifier) as! CreditViewController
+        vc.movieInfo = movieList[indexPath.item]
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "MovieCollectionReusableView", for: indexPath) as! MovieCollectionReusableView
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MovieCollectionReusableView.identifier, for: indexPath) as! MovieCollectionReusableView
         headerView.titleLabel.text = "#Week Trending"
         return headerView
     }
@@ -78,6 +85,6 @@ extension MovieViewController: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         referenceSizeForHeaderInSection section: Int)
     -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 50)
+        return CGSize(width: collectionView.frame.width, height: 48)
     }
 }

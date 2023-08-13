@@ -19,7 +19,7 @@ final class MovieCollectionViewCell: UICollectionViewCell {
             titleLabel.text = movieInfo?.title
             rateLabel.text = String(format: "%.1f", movieInfo?.vote_average ?? 0)
             guard let path = movieInfo?.poster_path else {
-                imageView.image = UIImage(named: "noPoster")
+                imageView.image = UIImage.noPosterImage
                 return
             }
             let url = TMDB_API.imageURL(
@@ -31,7 +31,7 @@ final class MovieCollectionViewCell: UICollectionViewCell {
     }
     override func prepareForReuse() {
         super.prepareForReuse()
-        imageView.image = UIImage(named: "noPoster")
+        imageView.image = UIImage.noPosterImage
     }
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,13 +43,14 @@ final class MovieCollectionViewCell: UICollectionViewCell {
     private func makeShadow() {
         layer.masksToBounds = false
         layer.shadowColor = UIColor.label.cgColor
-        layer.shadowOpacity = 0.5
-        layer.shadowRadius = 8
-        layer.shadowOffset = CGSize(width: 1, height: 1)
+        layer.shadowOpacity = 0.8
+        layer.shadowRadius = 12
+        layer.shadowOffset = CGSize(width: 4, height: 4)
     }
     
     @IBAction private func clipButtonTapped(_ sender: Any) {
     }
+    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         if #available(iOS 13, *), self.traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
             layer.shadowColor = UIColor.label.cgColor
