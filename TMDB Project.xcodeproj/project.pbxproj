@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550427362A8E3F23004E57FA /* RecommendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550427342A8E3F23004E57FA /* RecommendTableViewCell.swift */; };
+		550427372A8E3F23004E57FA /* RecommendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 550427352A8E3F23004E57FA /* RecommendTableViewCell.xib */; };
+		5504273B2A8E3F81004E57FA /* MovieCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 550427392A8E3F81004E57FA /* MovieCollectionReusableView.xib */; };
+		5504273D2A8E4260004E57FA /* CollectionViewAttributeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5504273C2A8E4260004E57FA /* CollectionViewAttributeProtocol.swift */; };
+		5504273F2A8E43EA004E57FA /* MovieRecommend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5504273E2A8E43EA004E57FA /* MovieRecommend.swift */; };
+		550427412A8E492C004E57FA /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550427402A8E492C004E57FA /* RecommendViewController.swift */; };
+		550427432A8E4A93004E57FA /* TableViewAttributeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550427422A8E4A93004E57FA /* TableViewAttributeProtocol.swift */; };
 		553DBB862A862742000ACEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBB852A862742000ACEFA /* AppDelegate.swift */; };
 		553DBB882A862742000ACEFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBB872A862742000ACEFA /* SceneDelegate.swift */; };
 		553DBB8A2A862742000ACEFA /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBB892A862742000ACEFA /* MovieViewController.swift */; };
@@ -33,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		550427342A8E3F23004E57FA /* RecommendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendTableViewCell.swift; sourceTree = "<group>"; };
+		550427352A8E3F23004E57FA /* RecommendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendTableViewCell.xib; sourceTree = "<group>"; };
+		550427392A8E3F81004E57FA /* MovieCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionReusableView.xib; sourceTree = "<group>"; };
+		5504273C2A8E4260004E57FA /* CollectionViewAttributeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAttributeProtocol.swift; sourceTree = "<group>"; };
+		5504273E2A8E43EA004E57FA /* MovieRecommend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRecommend.swift; sourceTree = "<group>"; };
+		550427402A8E492C004E57FA /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		550427422A8E4A93004E57FA /* TableViewAttributeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAttributeProtocol.swift; sourceTree = "<group>"; };
 		553DBB822A862742000ACEFA /* TMDB Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TMDB Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		553DBB852A862742000ACEFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		553DBB872A862742000ACEFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,7 +104,7 @@
 		553DBB842A862742000ACEFA /* TMDB Project */ = {
 			isa = PBXGroup;
 			children = (
-				553DBBB62A8661FF000ACEFA /* New Group */,
+				553DBBB62A8661FF000ACEFA /* Protocol */,
 				553DBB8E2A862744000ACEFA /* Assets.xcassets */,
 				553DBB932A862744000ACEFA /* Info.plist */,
 				553DBB992A862752000ACEFA /* App */,
@@ -118,10 +132,13 @@
 			children = (
 				553DBB8B2A862742000ACEFA /* Main.storyboard */,
 				553DBB902A862744000ACEFA /* LaunchScreen.storyboard */,
+				553DBBC12A891450000ACEFA /* CreditTableViewCell.swift */,
+				550427342A8E3F23004E57FA /* RecommendTableViewCell.swift */,
+				550427352A8E3F23004E57FA /* RecommendTableViewCell.xib */,
 				553DBBAF2A86563B000ACEFA /* MovieCollectionViewCell.swift */,
 				553DBBB02A86563B000ACEFA /* MovieCollectionViewCell.xib */,
 				553DBBB92A88C20A000ACEFA /* MovieCollectionReusableView.swift */,
-				553DBBC12A891450000ACEFA /* CreditTableViewCell.swift */,
+				550427392A8E3F81004E57FA /* MovieCollectionReusableView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +148,7 @@
 			children = (
 				553DBB892A862742000ACEFA /* MovieViewController.swift */,
 				553DBBBD2A88CE63000ACEFA /* CreditViewController.swift */,
+				550427402A8E492C004E57FA /* RecommendViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -149,6 +167,7 @@
 			children = (
 				553DBBA72A864183000ACEFA /* Trending.swift */,
 				553DBBAC2A864B82000ACEFA /* Credits.swift */,
+				5504273E2A8E43EA004E57FA /* MovieRecommend.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,11 +191,13 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		553DBBB62A8661FF000ACEFA /* New Group */ = {
+		553DBBB62A8661FF000ACEFA /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				5504273C2A8E4260004E57FA /* CollectionViewAttributeProtocol.swift */,
+				550427422A8E4A93004E57FA /* TableViewAttributeProtocol.swift */,
 			);
-			path = "New Group";
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,9 +268,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550427372A8E3F23004E57FA /* RecommendTableViewCell.xib in Resources */,
 				553DBBB22A86563B000ACEFA /* MovieCollectionViewCell.xib in Resources */,
 				553DBB9D2A862904000ACEFA /* .gitignore in Resources */,
 				553DBB922A862744000ACEFA /* LaunchScreen.storyboard in Resources */,
+				5504273B2A8E3F81004E57FA /* MovieCollectionReusableView.xib in Resources */,
 				553DBB8F2A862744000ACEFA /* Assets.xcassets in Resources */,
 				553DBB8D2A862742000ACEFA /* Main.storyboard in Resources */,
 			);
@@ -263,16 +286,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				553DBBA82A864183000ACEFA /* Trending.swift in Sources */,
+				5504273F2A8E43EA004E57FA /* MovieRecommend.swift in Sources */,
 				553DBBB82A86625B000ACEFA /* ReusableViewProtocol.swift in Sources */,
 				553DBB8A2A862742000ACEFA /* MovieViewController.swift in Sources */,
 				553DBB862A862742000ACEFA /* AppDelegate.swift in Sources */,
+				550427362A8E3F23004E57FA /* RecommendTableViewCell.swift in Sources */,
 				553DBBC42A891A3A000ACEFA /* UIViewController+Extension.swift in Sources */,
 				553DBBA22A8629B0000ACEFA /* TMDBNetworkManager.swift in Sources */,
+				550427432A8E4A93004E57FA /* TableViewAttributeProtocol.swift in Sources */,
+				5504273D2A8E4260004E57FA /* CollectionViewAttributeProtocol.swift in Sources */,
 				553DBB9F2A86294A000ACEFA /* APIKEY.swift in Sources */,
 				553DBBAB2A8643DC000ACEFA /* TMDB_API.swift in Sources */,
 				553DBBC22A891450000ACEFA /* CreditTableViewCell.swift in Sources */,
 				553DBBBB2A88C20A000ACEFA /* MovieCollectionReusableView.swift in Sources */,
 				553DBBB12A86563B000ACEFA /* MovieCollectionViewCell.swift in Sources */,
+				550427412A8E492C004E57FA /* RecommendViewController.swift in Sources */,
 				553DBBAD2A864B82000ACEFA /* Credits.swift in Sources */,
 				55B49A6C2A89AF7D00F0F2F3 /* UIImage+Extension.swift in Sources */,
 				553DBB882A862742000ACEFA /* SceneDelegate.swift in Sources */,

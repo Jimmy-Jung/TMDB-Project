@@ -160,8 +160,10 @@
             <size key="customSize" width="280" height="280"/>
             <connections>
                 <outlet property="backView" destination="k6Z-Vr-clC" id="Gdv-cP-sdR"/>
+                <outlet property="bottomView" destination="TxP-xC-W2l" id="j94-se-lQG"/>
                 <outlet property="imageView" destination="LsD-1X-VTO" id="NOY-Sd-WXD"/>
                 <outlet property="rateLabel" destination="hr4-sH-tBv" id="cL4-4X-klr"/>
+                <outlet property="rateStackView" destination="FBQ-xr-q9L" id="4Oj-fK-wwC"/>
                 <outlet property="titleLabel" destination="SbJ-hr-KcB" id="vGp-zZ-vhW"/>
             </connections>
             <point key="canvasLocation" x="189.31297709923663" y="68.309859154929583"/>

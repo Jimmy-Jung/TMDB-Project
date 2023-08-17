@@ -14,11 +14,13 @@ final class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var rateLabel: UILabel!
     
+    @IBOutlet weak var rateStackView: UIStackView!
+    @IBOutlet weak var bottomView: UIView!
     var movieInfo: MovieInfo? {
         didSet {
             titleLabel.text = movieInfo?.title
-            rateLabel.text = String(format: "%.1f", movieInfo?.vote_average ?? 0)
-            guard let path = movieInfo?.poster_path else {
+            rateLabel.text = String(format: "%.1f", movieInfo?.voteAverage ?? 0)
+            guard let path = movieInfo?.posterPath else {
                 imageView.image = UIImage.noPosterImage
                 return
             }
@@ -40,6 +42,10 @@ final class MovieCollectionViewCell: UICollectionViewCell {
         makeShadow()
     }
     
+    func hideViews() {
+        rateStackView.isHidden = true
+        bottomView.isHidden = true
+    }
     private func makeShadow() {
         layer.masksToBounds = false
         layer.shadowColor = UIColor.label.cgColor

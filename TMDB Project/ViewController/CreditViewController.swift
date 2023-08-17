@@ -48,7 +48,7 @@ final class CreditViewController: UIViewController {
         let retryStrategy = DelayRetryStrategy(maxRetryCount: 2, retryInterval: .seconds(3))
         let posterUrl = TMDB_API.imageURL(
             width: 200,
-            path: movieInfo?.poster_path ?? ""
+            path: movieInfo?.posterPath ?? ""
         )
         posterImageView.kf.setImage(
             with: posterUrl,
@@ -59,7 +59,7 @@ final class CreditViewController: UIViewController {
             ])
         let backdropUrl = TMDB_API.imageURL(
             width: 500,
-            path: movieInfo?.backdrop_path ?? ""
+            path: movieInfo?.backdropPath ?? ""
         )
         backPosterImageView.kf.setImage(
             with: backdropUrl,
@@ -80,6 +80,7 @@ final class CreditViewController: UIViewController {
     }
     
     @IBAction func moreButtonTapped(_ sender: UIButton) {
+//        creditTableView.beginUpdates()
         if !buttonToggle {
             descriptionLabel.numberOfLines = 0
             descriptionLabel.sizeToFit()
@@ -90,6 +91,7 @@ final class CreditViewController: UIViewController {
             headerView.frame.size.height = 153
             sender.setImage(UIImage(systemName: "chevron.down"), for: .normal)
         }
+//        creditTableView.endUpdates()
         creditTableView.sectionHeaderTopPadding = buttonToggle ? 0.02 : 0.01
         
         

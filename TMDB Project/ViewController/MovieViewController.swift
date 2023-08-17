@@ -31,8 +31,10 @@ final class MovieViewController: UIViewController {
     private func setupCollectionView() {
         movieCollectionView.delegate = self
         movieCollectionView.dataSource = self
-        let nib = UINib(nibName: MovieCollectionViewCell.identifier, bundle: nil)
-        movieCollectionView.register(nib, forCellWithReuseIdentifier: MovieCollectionViewCell.identifier)
+        let cellNib = UINib(nibName: MovieCollectionViewCell.identifier, bundle: nil)
+        movieCollectionView.register(cellNib, forCellWithReuseIdentifier: MovieCollectionViewCell.identifier)
+        let viewNib = UINib(nibName: MovieCollectionReusableView.identifier, bundle: nil)
+        movieCollectionView.register(viewNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MovieCollectionReusableView.identifier)
     }
     
     private func configCollectionView() {
@@ -75,6 +77,7 @@ extension MovieViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MovieCollectionReusableView.identifier, for: indexPath) as! MovieCollectionReusableView
+        headerView.titleLabel.font = .systemFont(ofSize: 25, weight: .black)
         headerView.titleLabel.text = "#Week Trending"
         return headerView
     }

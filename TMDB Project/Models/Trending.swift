@@ -17,17 +17,37 @@ struct Trending: Codable {
 // MARK: - Result
 struct MovieInfo: Codable {
     let adult: Bool?
-    let backdrop_path: String?
+    let backdropPath: String?
     let id: Int?
     let title: String?
-    let original_title, overview, poster_path: String?
-    let media_type: MediaType?
-    let genre_ids: [Int]?
+    let originalLanguage: String?
+    let originalTitle, overview: String?
+    let posterPath: String?
+    let mediaType: MediaType?
+    let genreIDS: [Int]
     let popularity: Double?
-    let release_date: String?
+    let releaseDate: String?
     let video: Bool?
-    let vote_average: Double?
-    let vote_count: Int?
+    let voteAverage: Double?
+    let voteCount: Int?
+
+    
+    enum CodingKeys: String, CodingKey {
+        case adult
+        case backdropPath = "backdrop_path"
+        case id, title
+        case originalLanguage = "original_language"
+        case originalTitle = "original_title"
+        case overview
+        case posterPath = "poster_path"
+        case mediaType = "media_type"
+        case genreIDS = "genre_ids"
+        case popularity
+        case releaseDate = "release_date"
+        case video
+        case voteAverage = "vote_average"
+        case voteCount = "vote_count"
+    }
 }
 
 enum MediaType: String, Codable {

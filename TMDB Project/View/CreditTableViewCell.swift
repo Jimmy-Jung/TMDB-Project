@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class CreditTableViewCell: UITableViewCell {
+final class CreditTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var secondaryLabel: UILabel!
