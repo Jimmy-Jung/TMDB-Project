@@ -13,9 +13,7 @@ final class CreditViewController: UIViewController {
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var backPosterImageView: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var creditTableView: UITableView!
-    @IBOutlet weak var headerView: UIView!
     private let networkManager = TMDBNetworkManager.shared
     private var castList: [Cast] = []
     private var crewList: [Cast] = []
@@ -30,19 +28,16 @@ final class CreditViewController: UIViewController {
         callRequest()
         fetchLabels()
         fetchImageViews()
-        descriptionLabel.sizeToFit()
-        headerView.sizeToFit()
-        headerView.setNeedsLayout()
-        headerView.setNeedsDisplay()
     }
     
     private func setupTableView() {
         creditTableView.delegate = self
         creditTableView.dataSource = self
+        creditTableView.rowHeight = UITableView.automaticDimension
+        creditTableView.sectionHeaderTopPadding = 0
     }
     private func fetchLabels() {
         movieTitleLabel.text = movieInfo?.title
-        descriptionLabel.text = movieInfo?.overview
     }
     private func fetchImageViews() {
         let retryStrategy = DelayRetryStrategy(maxRetryCount: 2, retryInterval: .seconds(3))
@@ -79,47 +74,45 @@ final class CreditViewController: UIViewController {
         }
     }
     
-    @IBAction func moreButtonTapped(_ sender: UIButton) {
-//        creditTableView.beginUpdates()
-        if !buttonToggle {
-            descriptionLabel.numberOfLines = 0
-            descriptionLabel.sizeToFit()
-            headerView.frame.size.height += descriptionLabel.frame.size.height - 53
-            sender.setImage(UIImage(systemName: "chevron.up"), for: .normal)
-        } else {
-            descriptionLabel.numberOfLines = 2
-            headerView.frame.size.height = 153
-            sender.setImage(UIImage(systemName: "chevron.down"), for: .normal)
-        }
-//        creditTableView.endUpdates()
-        creditTableView.sectionHeaderTopPadding = buttonToggle ? 0.02 : 0.01
-        
-        
-        buttonToggle.toggle()
-    }
-    
 }
 
 extension CreditViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        switch section {
+        case 0:
+            return 1
+        case 1:
             return castList.count
-        } else {
+        default:
             return crewList.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CreditTableViewCell.identifier, for: indexPath) as! CreditTableViewCell
-        if indexPath.section == 0 {
+        let overView = tableView.dequeueReusableCell(withIdentifier: OverViewTableViewCell.identifier) as! OverViewTableViewCell
+        switch indexPath.section {
+        case 0:
+            overView.descriptionLabel.text = movieInfo?.overview
+            return overView
+        case 1:
             cell.cast = castList[indexPath.row]
-        } else {
+            return cell
+        default:
             cell.crew = crewList[indexPath.row]
+            return cell
         }
-        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -127,7 +120,7 @@ extension CreditViewController: UITableViewDelegate, UITableViewDataSource {
         backView.backgroundColor = .systemBackground
         let label = UILabel()
         label.textColor = .secondaryLabel
-        label.text = section == 0 ? "Cast" : "Crew"
+        
         label.font = .systemFont(ofSize: 17, weight: .bold)
         
         backView.addSubview(label)
@@ -136,6 +129,13 @@ extension CreditViewController: UITableViewDelegate, UITableViewDataSource {
             make.leading.equalToSuperview().inset(20)
             make.top.equalToSuperview().inset(8)
             make.bottom.equalToSuperview().inset(8)
+        }
+        if section == 1 {
+            label.text =  "Cast"
+        } else if section == 2 {
+            label.text = "Crew"
+        } else {
+            backView.frame.size.height = 0
         }
         return backView
     }

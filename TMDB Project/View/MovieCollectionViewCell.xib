@@ -81,9 +81,6 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="FMY-nR-2Wb">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="191"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozo-GL-biK">
                                 <rect key="frame" x="230" y="0.0" width="50" height="50"/>
                                 <constraints>
@@ -134,17 +131,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="FBQ-xr-q9L" firstAttribute="leading" secondItem="k6Z-Vr-clC" secondAttribute="leading" constant="15" id="5Hw-6c-vaQ"/>
-                            <constraint firstItem="FMY-nR-2Wb" firstAttribute="bottom" secondItem="LsD-1X-VTO" secondAttribute="bottom" id="6Rb-4g-tZf"/>
                             <constraint firstItem="qzT-9y-hH6" firstAttribute="leading" secondItem="k6Z-Vr-clC" secondAttribute="leading" id="Fqe-wT-c77"/>
                             <constraint firstItem="qzT-9y-hH6" firstAttribute="top" secondItem="k6Z-Vr-clC" secondAttribute="top" id="LFh-Bj-XF3"/>
                             <constraint firstAttribute="bottom" secondItem="qzT-9y-hH6" secondAttribute="bottom" id="Mj0-sv-PKY"/>
                             <constraint firstAttribute="trailing" secondItem="ozo-GL-biK" secondAttribute="trailing" id="Reg-x0-h8I"/>
                             <constraint firstItem="ozo-GL-biK" firstAttribute="top" secondItem="k6Z-Vr-clC" secondAttribute="top" id="bGS-L2-cfN"/>
-                            <constraint firstItem="FMY-nR-2Wb" firstAttribute="leading" secondItem="LsD-1X-VTO" secondAttribute="leading" id="iO4-Cf-tTK"/>
-                            <constraint firstItem="FMY-nR-2Wb" firstAttribute="trailing" secondItem="LsD-1X-VTO" secondAttribute="trailing" id="jDb-Q6-6OK"/>
                             <constraint firstItem="FBQ-xr-q9L" firstAttribute="bottom" secondItem="LsD-1X-VTO" secondAttribute="bottom" constant="-15" id="lag-Sg-S2N"/>
                             <constraint firstAttribute="trailing" secondItem="qzT-9y-hH6" secondAttribute="trailing" id="pnR-dY-78d"/>
-                            <constraint firstItem="FMY-nR-2Wb" firstAttribute="top" secondItem="LsD-1X-VTO" secondAttribute="top" id="tgt-YK-1fc"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -170,7 +163,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="background" width="375" height="667"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="paperclip.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">

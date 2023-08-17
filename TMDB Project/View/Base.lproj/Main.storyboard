@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movie View Controller-->
+        <!--주간 트렌드-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MovieViewController" customModule="TMDB_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                             <constraint firstItem="xa2-sk-UuS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yuD-JX-bdz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Phy-Rs-mk9">
+                    <navigationItem key="navigationItem" title="주간 트렌드" id="Phy-Rs-mk9">
                         <barButtonItem key="leftBarButtonItem" image="list.bullet" catalog="system" id="6om-b7-WwW">
                             <color key="tintColor" systemColor="labelColor"/>
                         </barButtonItem>
@@ -64,15 +64,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hgu-Ol-ERg">
                                 <rect key="frame" x="0.0" y="280" width="393" height="538"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="Ev0-7y-mH5">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="153"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHB-No-gwB">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="153"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="OverViewTableViewCell" rowHeight="135" id="ALU-Wl-sak" customClass="OverViewTableViewCell" customModule="TMDB_Project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ALU-Wl-sak" id="4jD-8V-sgT">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="29N-Vy-rua">
-                                                    <rect key="frame" x="20" y="12" width="353" height="129"/>
+                                                    <rect key="frame" x="20" y="0.0" width="353" height="135"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OverView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJv-EY-YsG">
                                                             <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
@@ -81,21 +82,21 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ca1-CJ-ATG">
-                                                            <rect key="frame" x="0.0" y="28.333333333333336" width="353" height="1"/>
+                                                            <rect key="frame" x="0.0" y="28.333333333333332" width="353" height="1"/>
                                                             <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="dp9-u5-taV"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbc-SI-tUV">
-                                                            <rect key="frame" x="0.0" y="37.333333333333343" width="353" height="53.666666666666657"/>
+                                                            <rect key="frame" x="0.0" y="37.333333333333343" width="353" height="59.666666666666657"/>
                                                             <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9f-I0-b5b">
-                                                            <rect key="frame" x="0.0" y="99" width="353" height="30"/>
+                                                            <rect key="frame" x="0.0" y="105" width="353" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="gAz-d1-3Zs"/>
                                                             </constraints>
@@ -103,33 +104,24 @@
                                                             <buttonConfiguration key="configuration" style="plain" image="chevron.down" catalog="system">
                                                                 <color key="baseForegroundColor" systemColor="labelColor"/>
                                                             </buttonConfiguration>
-                                                            <connections>
-                                                                <action selector="moreButtonTapped:" destination="01M-Hv-j0S" eventType="touchUpInside" id="wYc-Aa-eCX"/>
-                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstItem="29N-Vy-rua" firstAttribute="top" secondItem="BHB-No-gwB" secondAttribute="top" constant="12" id="Oga-1g-t5j"/>
-                                                <constraint firstAttribute="bottom" secondItem="29N-Vy-rua" secondAttribute="bottom" constant="12" id="msJ-kV-bdg"/>
-                                                <constraint firstItem="29N-Vy-rua" firstAttribute="leading" secondItem="BHB-No-gwB" secondAttribute="leading" constant="20" id="zgE-qY-Wsy"/>
-                                                <constraint firstAttribute="trailing" secondItem="29N-Vy-rua" secondAttribute="trailing" constant="20" id="zxP-Br-Qcz"/>
+                                                <constraint firstAttribute="trailing" secondItem="29N-Vy-rua" secondAttribute="trailing" constant="20" id="8bG-E3-8HO"/>
+                                                <constraint firstItem="29N-Vy-rua" firstAttribute="top" secondItem="4jD-8V-sgT" secondAttribute="top" id="MFr-MQ-GMk"/>
+                                                <constraint firstAttribute="bottom" secondItem="29N-Vy-rua" secondAttribute="bottom" id="eLN-QI-dZo"/>
+                                                <constraint firstItem="29N-Vy-rua" firstAttribute="leading" secondItem="4jD-8V-sgT" secondAttribute="leading" constant="20" id="yJP-Wj-Qup"/>
                                             </constraints>
-                                        </view>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstItem="BHB-No-gwB" firstAttribute="leading" secondItem="Ev0-7y-mH5" secondAttribute="leading" id="3uT-OC-Nqc"/>
-                                        <constraint firstAttribute="trailing" secondItem="BHB-No-gwB" secondAttribute="trailing" id="799-ka-1IT"/>
-                                        <constraint firstAttribute="bottom" secondItem="BHB-No-gwB" secondAttribute="bottom" id="est-8T-VCH"/>
-                                        <constraint firstItem="BHB-No-gwB" firstAttribute="top" secondItem="Ev0-7y-mH5" secondAttribute="top" id="kzP-Y9-7oi"/>
-                                    </constraints>
-                                </view>
-                                <prototypes>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="qbc-SI-tUV" id="zeH-nH-agH"/>
+                                            <outlet property="moreButton" destination="h9f-I0-b5b" id="qhP-gJ-zF2"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CreditTableViewCell" rowHeight="96" id="cGQ-ny-tuC" customClass="CreditTableViewCell" customModule="TMDB_Project" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="203" width="393" height="96"/>
+                                        <rect key="frame" x="0.0" y="185" width="393" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cGQ-ny-tuC" id="BfK-Za-aLg">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
@@ -232,21 +224,19 @@
                     <connections>
                         <outlet property="backPosterImageView" destination="Fue-zu-g6i" id="Ydc-6m-cb1"/>
                         <outlet property="creditTableView" destination="hgu-Ol-ERg" id="xDL-ol-k3U"/>
-                        <outlet property="descriptionLabel" destination="qbc-SI-tUV" id="E4w-ce-xiJ"/>
-                        <outlet property="headerView" destination="Ev0-7y-mH5" id="LRw-Im-StC"/>
                         <outlet property="movieTitleLabel" destination="fFA-7J-SX9" id="Nt4-Ls-1CW"/>
                         <outlet property="posterImageView" destination="6Wg-Kz-Wvu" id="Jko-jV-V6m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ph-UL-MQS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="1459"/>
+            <point key="canvasLocation" x="1690.8396946564885" y="747.88732394366195"/>
         </scene>
-        <!--Item-->
+        <!--주간트렌드-->
         <scene sceneID="uva-8t-Fd3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fgs-Ep-vTK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="QmU-c1-ia0"/>
+                    <tabBarItem key="tabBarItem" title="주간트렌드" image="star.circle" catalog="system" id="QmU-c1-ia0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3gU-sX-xuw">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -265,7 +255,7 @@
             </objects>
             <point key="canvasLocation" x="10" y="46"/>
         </scene>
-        <!--Recommend View Controller-->
+        <!--추천 영화-->
         <scene sceneID="rPx-bf-87J">
             <objects>
                 <viewController id="83d-QA-Xje" customClass="RecommendViewController" customModule="TMDB_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -287,7 +277,14 @@
                             <constraint firstItem="hc5-kL-5MP" firstAttribute="trailing" secondItem="tVD-bU-Ecm" secondAttribute="trailing" id="kZu-vy-x2l"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gZh-ma-zbz"/>
+                    <navigationItem key="navigationItem" title="추천 영화" id="gZh-ma-zbz">
+                        <barButtonItem key="leftBarButtonItem" image="list.bullet" catalog="system" id="k1B-Bt-zp0">
+                            <color key="tintColor" systemColor="labelColor"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="magnifyingglass" catalog="system" id="I9D-6A-AC4">
+                            <color key="tintColor" systemColor="labelColor"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="recommendTableView" destination="tVD-bU-Ecm" id="lJr-2b-xeh"/>
                     </connections>
@@ -304,6 +301,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tyQ-cf-uFx">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="linkColor"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="fgs-Ep-vTK" kind="relationship" relationship="viewControllers" id="JZs-Ec-v2h"/>
@@ -314,11 +313,11 @@
             </objects>
             <point key="canvasLocation" x="466" y="-723"/>
         </scene>
-        <!--Item-->
+        <!--추천영화-->
         <scene sceneID="yqM-Bs-8WB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Ul-TE-rwA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="yY1-2L-Cod"/>
+                    <tabBarItem key="tabBarItem" title="추천영화" image="star.square.on.square.fill" catalog="system" id="yY1-2L-Cod"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v4s-R8-7PC">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -340,8 +339,13 @@
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="star.circle" catalog="system" width="128" height="123"/>
+        <image name="star.square.on.square.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

@@ -50,8 +50,8 @@ final class MovieCollectionViewCell: UICollectionViewCell {
         layer.masksToBounds = false
         layer.shadowColor = UIColor.label.cgColor
         layer.shadowOpacity = 0.8
-        layer.shadowRadius = 12
-        layer.shadowOffset = CGSize(width: 4, height: 4)
+        layer.shadowRadius = 10
+        layer.shadowOffset = CGSize(width: 2, height: 2)
     }
     
     @IBAction private func clipButtonTapped(_ sender: Any) {

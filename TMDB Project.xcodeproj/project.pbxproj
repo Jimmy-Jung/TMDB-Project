@@ -14,6 +14,7 @@
 		5504273F2A8E43EA004E57FA /* MovieRecommend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5504273E2A8E43EA004E57FA /* MovieRecommend.swift */; };
 		550427412A8E492C004E57FA /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550427402A8E492C004E57FA /* RecommendViewController.swift */; };
 		550427432A8E4A93004E57FA /* TableViewAttributeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550427422A8E4A93004E57FA /* TableViewAttributeProtocol.swift */; };
+		550427452A8E621E004E57FA /* OverViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550427442A8E621E004E57FA /* OverViewTableViewCell.swift */; };
 		553DBB862A862742000ACEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBB852A862742000ACEFA /* AppDelegate.swift */; };
 		553DBB882A862742000ACEFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBB872A862742000ACEFA /* SceneDelegate.swift */; };
 		553DBB8A2A862742000ACEFA /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBB892A862742000ACEFA /* MovieViewController.swift */; };
@@ -47,6 +48,7 @@
 		5504273E2A8E43EA004E57FA /* MovieRecommend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRecommend.swift; sourceTree = "<group>"; };
 		550427402A8E492C004E57FA /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		550427422A8E4A93004E57FA /* TableViewAttributeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAttributeProtocol.swift; sourceTree = "<group>"; };
+		550427442A8E621E004E57FA /* OverViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewTableViewCell.swift; sourceTree = "<group>"; };
 		553DBB822A862742000ACEFA /* TMDB Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TMDB Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		553DBB852A862742000ACEFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		553DBB872A862742000ACEFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				553DBB8B2A862742000ACEFA /* Main.storyboard */,
 				553DBB902A862744000ACEFA /* LaunchScreen.storyboard */,
+				550427442A8E621E004E57FA /* OverViewTableViewCell.swift */,
 				553DBBC12A891450000ACEFA /* CreditTableViewCell.swift */,
 				550427342A8E3F23004E57FA /* RecommendTableViewCell.swift */,
 				550427352A8E3F23004E57FA /* RecommendTableViewCell.xib */,
@@ -292,6 +295,7 @@
 				553DBB862A862742000ACEFA /* AppDelegate.swift in Sources */,
 				550427362A8E3F23004E57FA /* RecommendTableViewCell.swift in Sources */,
 				553DBBC42A891A3A000ACEFA /* UIViewController+Extension.swift in Sources */,
+				550427452A8E621E004E57FA /* OverViewTableViewCell.swift in Sources */,
 				553DBBA22A8629B0000ACEFA /* TMDBNetworkManager.swift in Sources */,
 				550427432A8E4A93004E57FA /* TableViewAttributeProtocol.swift in Sources */,
 				5504273D2A8E4260004E57FA /* CollectionViewAttributeProtocol.swift in Sources */,
