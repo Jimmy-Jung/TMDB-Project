@@ -66,7 +66,7 @@ final class CreditViewController: UIViewController {
     }
     
     private func callRequest() {
-        networkManager.requestCredits(movieID: movieInfo?.id ?? 0) { [weak self] credits in
+        networkManager.requestTMDB(movieID: movieInfo?.id)  { [weak self] (credits: Credits) in
             guard let self else { return }
             castList = credits.cast ?? []
             crewList = credits.crew ?? []

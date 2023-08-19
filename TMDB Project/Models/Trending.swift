@@ -7,8 +7,10 @@
 
 import Foundation
 
-// MARK: - Credits
-struct Trending: Codable {
+protocol TMDBProtocol {}
+
+// MARK: - Trending
+struct Trending: Codable, TMDBProtocol {
     let page: Int?
     let results: [MovieInfo]?
     let totalPages, totalResults: Int?

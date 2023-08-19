@@ -64,4 +64,28 @@ final class TMDBNetworkManager {
             }
         }
     }
+    
+    func requestTMDB<T: Decodable>(movieID: Int?, completionHandler: @escaping ((T) -> Void)) {
+        let url: String
+        if T.self == Credits.self {
+            guard let movieID else { fatalError("movieID is nil!!") }
+            url = TMDB_API.Credits.url(movieID: movieID)
+        } else {
+            url = TMDB_API.Trending.url(period: .week)
+        }
+        
+        let headers: HTTPHeaders = [
+          "accept": "application/json",
+          "Authorization": APIKEY.TMDB_Acess_Token
+        ]
+        let parameters: Parameters = ["language": "ko"]
+        AF.request(url, method: .get, parameters: parameters, headers: headers).validate().responseDecodable(of: T.self) { response in
+            switch response.result {
+            case .success(let value):
+                completionHandler(value)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }
