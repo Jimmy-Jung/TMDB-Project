@@ -39,20 +39,13 @@ final class MovieViewController: UIViewController {
     }
     
     private func configCollectionView() {
-        let layout = UICollectionViewFlowLayout()
-        let inset: CGFloat = 40
-        let width = UIScreen.main.bounds.width - (inset * 2)
-        layout.itemSize = CGSize(width: width, height: width * (4/3))
-        layout.sectionInset = UIEdgeInsets(
-            top: 10,
-            left: inset,
-            bottom: inset,
-            right: inset
+        let layout = UICollectionView.getCollectionViewFlowLayout(
+            numberOfRows: 1,
+            itemRatio: 4/3,
+            spacing: 40,
+            inset: 40,
+            scrollDirection: .vertical
         )
-        movieCollectionView.collectionViewLayout = layout
-        layout.minimumInteritemSpacing = inset
-        layout.minimumLineSpacing = inset
-        layout.scrollDirection = .vertical
         movieCollectionView.collectionViewLayout = layout
     }
 }

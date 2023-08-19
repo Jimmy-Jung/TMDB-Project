@@ -16,6 +16,7 @@
 		550427432A8E4A93004E57FA /* TableViewAttributeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550427422A8E4A93004E57FA /* TableViewAttributeProtocol.swift */; };
 		550427452A8E621E004E57FA /* OverViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550427442A8E621E004E57FA /* OverViewTableViewCell.swift */; };
 		550427512A911806004E57FA /* UIImageVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550427502A911805004E57FA /* UIImageVIew+Extension.swift */; };
+		550427532A91413C004E57FA /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550427522A91413C004E57FA /* UICollectionView+Extension.swift */; };
 		553DBB862A862742000ACEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBB852A862742000ACEFA /* AppDelegate.swift */; };
 		553DBB882A862742000ACEFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBB872A862742000ACEFA /* SceneDelegate.swift */; };
 		553DBB8A2A862742000ACEFA /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBB892A862742000ACEFA /* MovieViewController.swift */; };
@@ -51,6 +52,7 @@
 		550427422A8E4A93004E57FA /* TableViewAttributeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAttributeProtocol.swift; sourceTree = "<group>"; };
 		550427442A8E621E004E57FA /* OverViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewTableViewCell.swift; sourceTree = "<group>"; };
 		550427502A911805004E57FA /* UIImageVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageVIew+Extension.swift"; sourceTree = "<group>"; };
+		550427522A91413C004E57FA /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		553DBB822A862742000ACEFA /* TMDB Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TMDB Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		553DBB852A862742000ACEFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		553DBB872A862742000ACEFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				553DBBC32A891A3A000ACEFA /* UIViewController+Extension.swift */,
 				55B49A6B2A89AF7D00F0F2F3 /* UIImage+Extension.swift */,
 				550427502A911805004E57FA /* UIImageVIew+Extension.swift */,
+				550427522A91413C004E57FA /* UICollectionView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				553DBBC42A891A3A000ACEFA /* UIViewController+Extension.swift in Sources */,
 				550427452A8E621E004E57FA /* OverViewTableViewCell.swift in Sources */,
 				550427512A911806004E57FA /* UIImageVIew+Extension.swift in Sources */,
+				550427532A91413C004E57FA /* UICollectionView+Extension.swift in Sources */,
 				553DBBA22A8629B0000ACEFA /* TMDBNetworkManager.swift in Sources */,
 				550427432A8E4A93004E57FA /* TableViewAttributeProtocol.swift in Sources */,
 				5504273D2A8E4260004E57FA /* CollectionViewAttributeProtocol.swift in Sources */,
