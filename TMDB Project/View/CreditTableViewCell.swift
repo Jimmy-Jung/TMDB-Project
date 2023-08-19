@@ -18,17 +18,22 @@ final class CreditTableViewCell: UITableViewCell {
             guard let cast else { return }
             nameLabel.text = cast.name
             secondaryLabel.text = cast.character
-            let url = TMDB_API.imageURL(
+            let url = TMDB_API.imageURLString(
                 width: 200,
                 path: cast.profile_path ?? ""
             )
-            profileImageView.kf.setImage(
+//            profileImageView.kf.setImage(
+//                with: url,
+//                placeholder: UIImage.noProfileImage,
+//                options: [
+//                    .retryStrategy(retryStrategy),
+//                    .transition(.fade(0.5))
+//                ]
+//            )
+            profileImageView.setImage(
                 with: url,
-                placeholder: UIImage.noProfileImage,
-                options: [
-                    .retryStrategy(retryStrategy),
-                    .transition(.fade(0.5))
-                ]
+                placeHolder: .noProfileImage,
+                transition: .fade(0.5)
             )
         }
     }

@@ -9,7 +9,7 @@ import UIKit
 
 extension UIImage {
     static var noProfileImage: UIImage? {
-        return UIImage(systemName: "person.circle")
+        return UIImage(systemName: "person")
     }
     
     static var noPosterImage: UIImage? {

@@ -14,6 +14,9 @@ enum TMDB_API {
     static func imageURL(width: Int, path: String) -> URL? {
         return URL(string: "https://image.tmdb.org/t/p/w\(width)\(path)")
     }
+    static func imageURLString(width: Int, path: String) -> String {
+        return "https://image.tmdb.org/t/p/w\(width)\(path)"
+    }
     
     enum Trending {
         static func url(period: Period) -> String {
