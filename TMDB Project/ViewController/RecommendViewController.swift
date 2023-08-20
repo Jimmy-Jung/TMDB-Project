@@ -20,7 +20,11 @@ final class RecommendViewController: UIViewController {
         callTrending()
     }
     private func callTrending() {
-        networkManager.requestTrending(period: .week) { [weak self] list in
+        networkManager.requestTMDB(
+            requestOption: .trendings(.week),
+            metaType: Trendings.self
+        ) { [weak self] trendings in
+            guard let list = trendings.results else { return }
             self?.movieList = list
             self?.callRecommendationWithDispatchGroup()
         }
@@ -28,7 +32,10 @@ final class RecommendViewController: UIViewController {
     
     private func callRecommendationWithDispatchGroup() {
         movieList.forEach {
-            networkManager.requestRecommendation(movieID: $0.id ?? 0) { [weak self] data in
+            networkManager.requestTMDB(
+                requestOption: .recommendation($0.id ?? 1),
+                metaType: Recommendations.self
+            ) { [weak self] data in
                 if data.results.count > 1 {
                     self?.recommendList.append(data.results)
                     self?.recommendTableView.reloadData()

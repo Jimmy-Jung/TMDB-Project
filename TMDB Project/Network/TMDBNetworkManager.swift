@@ -12,15 +12,15 @@ final class TMDBNetworkManager {
     static let shared = TMDBNetworkManager()
     private init() {}
     
-    func requestRecommendation(movieID: Int, completionHandler: @escaping ((_ data: MovieRecommendation) -> Void)) {
+    func requestRecommendation(movieID: Int, completionHandler: @escaping ((_ data: Recommendations) -> Void)) {
         let url =
-    "https://api.themoviedb.org/3/movie/\(movieID)/recommendations"
+        "https://api.themoviedb.org/3/movie/\(movieID)/recommendations"
         let headers: HTTPHeaders = [
-          "accept": "application/json",
-          "Authorization": APIKEY.TMDB_Acess_Token
+            "accept": "application/json",
+            "Authorization": APIKEY.TMDB_Acess_Token
         ]
         let parameters: Parameters = ["language": "ko"]
-        AF.request(url, method: .get, parameters: parameters, headers: headers).validate(statusCode: 200...500).responseDecodable(of: MovieRecommendation.self) { response in
+        AF.request(url, method: .get, parameters: parameters, headers: headers).validate(statusCode: 200...500).responseDecodable(of: Recommendations.self) { response in
             switch response.result {
             case .success(let value):
                 completionHandler(value)
@@ -31,13 +31,13 @@ final class TMDBNetworkManager {
     }
     
     func requestTrending(period: Period, completionHandler: @escaping (([MovieInfo]) -> Void)) {
-        let url = TMDB_API.Trending.url(period: period)
+        let url = TMDB_API.Trendings.url(period: period)
         let headers: HTTPHeaders = [
-          "accept": "application/json",
-          "Authorization": APIKEY.TMDB_Acess_Token
+            "accept": "application/json",
+            "Authorization": APIKEY.TMDB_Acess_Token
         ]
         let parameters: Parameters = ["language": "ko"]
-        AF.request(url, method: .get, parameters: parameters, headers: headers).validate().responseDecodable(of: Trending.self) { response in
+        AF.request(url, method: .get, parameters: parameters, headers: headers).validate().responseDecodable(of: Trendings.self) { response in
             switch response.result {
             case .success(let value):
                 guard let movieInfoList = value.results else {return}
@@ -51,8 +51,8 @@ final class TMDBNetworkManager {
     func requestCredits(movieID: Int, completionHandler: @escaping ((Credits) -> Void)) {
         let url = TMDB_API.Credits.url(movieID: movieID)
         let headers: HTTPHeaders = [
-          "accept": "application/json",
-          "Authorization": APIKEY.TMDB_Acess_Token
+            "accept": "application/json",
+            "Authorization": APIKEY.TMDB_Acess_Token
         ]
         let parameters: Parameters = ["language": "ko"]
         AF.request(url, method: .get, parameters: parameters, headers: headers).validate().responseDecodable(of: Credits.self) { response in
@@ -65,27 +65,22 @@ final class TMDBNetworkManager {
         }
     }
     
-    func requestTMDB<T: Decodable>(movieID: Int?, completionHandler: @escaping ((T) -> Void)) {
-        let url: String
-        if T.self == Credits.self {
-            guard let movieID else { fatalError("movieID is nil!!") }
-            url = TMDB_API.Credits.url(movieID: movieID)
-        } else {
-            url = TMDB_API.Trending.url(period: .week)
-        }
-        
+    func requestTMDB<T: Decodable & TMDBResultType>(requestOption: TMDBRequestOption, metaType: T.Type, completionHandler: @escaping ((T) -> Void)) {
+        let url = requestOption.getURL
         let headers: HTTPHeaders = [
-          "accept": "application/json",
-          "Authorization": APIKEY.TMDB_Acess_Token
+            "accept": "application/json",
+            "Authorization": APIKEY.TMDB_Acess_Token
         ]
         let parameters: Parameters = ["language": "ko"]
-        AF.request(url, method: .get, parameters: parameters, headers: headers).validate().responseDecodable(of: T.self) { response in
-            switch response.result {
-            case .success(let value):
-                completionHandler(value)
-            case .failure(let error):
-                print(error)
+        AF.request(url, method: .get, parameters: parameters, headers: headers)
+            .validate()
+            .responseDecodable(of: metaType) { response in
+                switch response.result {
+                case .success(let value):
+                    completionHandler(value)
+                case .failure(let error):
+                    print(error)
+                }
             }
-        }
     }
 }

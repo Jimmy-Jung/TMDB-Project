@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - MovieRecommend
-struct MovieRecommendation: Codable {
+struct Recommendations: Codable, TMDBResultType {
     let page: Int?
     let results: [MovieInfo]
     let totalPages, totalResults: Int?

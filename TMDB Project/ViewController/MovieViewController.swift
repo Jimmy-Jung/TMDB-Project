@@ -22,8 +22,11 @@ final class MovieViewController: UIViewController {
     }
     
     private func callRequest() {
-        networkManager.requestTMDB(movieID: nil) { [weak self] (trending: Trending) in
-            guard let list = trending.results else { return }
+        networkManager.requestTMDB(
+            requestOption: .trendings(.week),
+            metaType: Trendings.self
+        ) { [weak self] trendings in
+            guard let list = trendings.results else { return }
             self?.movieList.append(contentsOf: list)
             self?.movieCollectionView.reloadData()
         }

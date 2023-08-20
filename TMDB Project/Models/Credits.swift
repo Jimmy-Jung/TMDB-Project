@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Credits
-struct Credits: Codable, TMDBProtocol {
+struct Credits: Codable, TMDBResultType {
     let id: Int?
     let cast, crew: [Cast]?
 }

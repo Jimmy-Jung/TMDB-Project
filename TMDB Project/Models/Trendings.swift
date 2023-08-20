@@ -6,11 +6,10 @@
 //
 
 import Foundation
-
-protocol TMDBProtocol {}
+protocol TMDBResultType {}
 
 // MARK: - Trending
-struct Trending: Codable, TMDBProtocol {
+struct Trendings: Codable, TMDBResultType {
     let page: Int?
     let results: [MovieInfo]?
     let totalPages, totalResults: Int?
