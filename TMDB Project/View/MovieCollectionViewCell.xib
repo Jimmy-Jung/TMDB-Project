@@ -35,14 +35,27 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="248" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="C31-Xe-n5r">
                                                 <rect key="frame" x="20" y="0.0" width="240" height="67"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbJ-hr-KcB">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FZk-39-wOv">
                                                         <rect key="frame" x="0.0" y="0.0" width="240" height="24"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="24" id="pHr-vl-4PS"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbJ-hr-KcB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="140.33333333333334" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="pHr-vl-4PS"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Origin Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-67-bSI">
+                                                                <rect key="frame" x="144.33333333333334" y="0.0" width="95.666666666666657" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="xL0-mh-p20"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FbS-5R-8dr">
                                                         <rect key="frame" x="0.0" y="36" width="240" height="1"/>
                                                         <color key="backgroundColor" systemColor="labelColor"/>
@@ -155,6 +168,7 @@
                 <outlet property="backView" destination="k6Z-Vr-clC" id="Gdv-cP-sdR"/>
                 <outlet property="bottomView" destination="TxP-xC-W2l" id="j94-se-lQG"/>
                 <outlet property="imageView" destination="LsD-1X-VTO" id="NOY-Sd-WXD"/>
+                <outlet property="originalTitleLabel" destination="dhL-67-bSI" id="OqM-AO-8PG"/>
                 <outlet property="rateLabel" destination="hr4-sH-tBv" id="cL4-4X-klr"/>
                 <outlet property="rateStackView" destination="FBQ-xr-q9L" id="4Oj-fK-wwC"/>
                 <outlet property="titleLabel" destination="SbJ-hr-KcB" id="vGp-zZ-vhW"/>

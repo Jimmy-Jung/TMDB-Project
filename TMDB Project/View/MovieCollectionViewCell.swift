@@ -12,6 +12,7 @@ final class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var backView: UIView!
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var originalTitleLabel: UILabel!
     @IBOutlet private weak var rateLabel: UILabel!
     
     @IBOutlet weak var rateStackView: UIStackView!
@@ -19,6 +20,7 @@ final class MovieCollectionViewCell: UICollectionViewCell {
     var movieInfo: MovieInfo? {
         didSet {
             titleLabel.text = movieInfo?.title
+            originalTitleLabel.text = movieInfo?.originalTitle
             rateLabel.text = String(format: "%.1f", movieInfo?.voteAverage ?? 0)
             guard let path = movieInfo?.posterPath else {
                 imageView.image = UIImage.noPosterImage
