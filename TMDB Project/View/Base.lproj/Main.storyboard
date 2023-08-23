@@ -308,6 +308,7 @@
                     <connections>
                         <segue destination="fgs-Ep-vTK" kind="relationship" relationship="viewControllers" id="JZs-Ec-v2h"/>
                         <segue destination="9Ul-TE-rwA" kind="relationship" relationship="viewControllers" id="XqX-wE-8lI"/>
+                        <segue destination="EYk-x1-q6z" kind="relationship" relationship="viewControllers" id="pf1-dP-Fw8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yk1-eF-dVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -333,12 +334,29 @@
             </objects>
             <point key="canvasLocation" x="907.63358778625945" y="45.774647887323944"/>
         </scene>
+        <!--영화관-->
+        <scene sceneID="jPE-57-4mD">
+            <objects>
+                <viewController id="EYk-x1-q6z" customClass="MapViewController" customModule="TMDB_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hYj-hs-R4k">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WJ3-ay-egs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="영화관" image="map.fill" catalog="system" id="C2H-1V-Jw7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wKf-vT-HzW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808" y="46"/>
+        </scene>
     </scenes>
     <resources>
         <image name="HorizontalGradation" width="833.33331298828125" height="833.33331298828125"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="star.circle" catalog="system" width="128" height="123"/>
         <image name="star.square.on.square.fill" catalog="system" width="128" height="116"/>

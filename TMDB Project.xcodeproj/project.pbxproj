@@ -40,6 +40,8 @@
 		553DBBC42A891A3A000ACEFA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBBC32A891A3A000ACEFA /* UIViewController+Extension.swift */; };
 		553DBBC72A892E39000ACEFA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 553DBBC62A892E39000ACEFA /* SnapKit */; };
 		55B49A6C2A89AF7D00F0F2F3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B49A6B2A89AF7D00F0F2F3 /* UIImage+Extension.swift */; };
+		55E362C72A96172600C332A2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E362C62A96172600C332A2 /* MapViewController.swift */; };
+		55E362C92A963A9000C332A2 /* sampleCode_map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E362C82A963A9000C332A2 /* sampleCode_map.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,8 @@
 		553DBBC12A891450000ACEFA /* CreditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditTableViewCell.swift; sourceTree = "<group>"; };
 		553DBBC32A891A3A000ACEFA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		55B49A6B2A89AF7D00F0F2F3 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		55E362C62A96172600C332A2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		55E362C82A963A9000C332A2 /* sampleCode_map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sampleCode_map.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 				553DBB892A862742000ACEFA /* MovieViewController.swift */,
 				553DBBBD2A88CE63000ACEFA /* CreditViewController.swift */,
 				550427402A8E492C004E57FA /* RecommendViewController.swift */,
+				55E362C62A96172600C332A2 /* MapViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				553DBBA72A864183000ACEFA /* Trendings.swift */,
 				553DBBAC2A864B82000ACEFA /* Credits.swift */,
 				5504273E2A8E43EA004E57FA /* Recommendations.swift */,
+				55E362C82A963A9000C332A2 /* sampleCode_map.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,6 +307,7 @@
 				553DBB862A862742000ACEFA /* AppDelegate.swift in Sources */,
 				550427362A8E3F23004E57FA /* RecommendTableViewCell.swift in Sources */,
 				553DBBC42A891A3A000ACEFA /* UIViewController+Extension.swift in Sources */,
+				55E362C72A96172600C332A2 /* MapViewController.swift in Sources */,
 				550427452A8E621E004E57FA /* OverViewTableViewCell.swift in Sources */,
 				550427512A911806004E57FA /* UIImageVIew+Extension.swift in Sources */,
 				550427532A91413C004E57FA /* UICollectionView+Extension.swift in Sources */,
@@ -315,6 +322,7 @@
 				550427412A8E492C004E57FA /* RecommendViewController.swift in Sources */,
 				553DBBAD2A864B82000ACEFA /* Credits.swift in Sources */,
 				55B49A6C2A89AF7D00F0F2F3 /* UIImage+Extension.swift in Sources */,
+				55E362C92A963A9000C332A2 /* sampleCode_map.swift in Sources */,
 				553DBB882A862742000ACEFA /* SceneDelegate.swift in Sources */,
 				553DBBBE2A88CE63000ACEFA /* CreditViewController.swift in Sources */,
 			);
