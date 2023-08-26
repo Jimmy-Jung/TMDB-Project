@@ -1,4 +1,6 @@
-# TMDB-Project
+# SeSAC 8월25일(금) 과제
+
+![Simulator Screen Recording - iPhone 14 - 2023-08-26 at 16 16 26](https://github.com/Jimmy-Jung/TMDB-Project/assets/115251866/b096643e-35b7-4fea-9407-8c35d32976c4)
 
 # SeSAC 8월23일(수) 과제
 
