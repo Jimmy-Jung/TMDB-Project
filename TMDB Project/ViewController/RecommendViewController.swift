@@ -86,10 +86,9 @@ protocol Pushable {
 }
 extension RecommendViewController: Pushable {
     func pushNavigation(movieInfo: MovieInfo) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: CreditViewController.identifier) as! CreditViewController
-        vc.movieInfo = movieInfo
-        navigationController?.pushViewController(vc, animated: true)
+        transition(storyboard: "Main", viewController: CreditViewController.self, style: .pushNavigation) { vc in
+            vc.movieInfo = movieInfo
+        }
     }
     
     
