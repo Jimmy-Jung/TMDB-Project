@@ -29,7 +29,7 @@ final class DescriptionViewController: UIViewController {
     }()
     
     @objc private func closeButtonTapped(_ sender: UIButton) {
-        delegate?.dismissVC()
+        delegate?.changeRootViewController()
     }
     
     var delegate: Dismissable?

@@ -92,7 +92,6 @@ final class MapViewController: UIViewController {
         setupDelegate()
         checkDeviceLocationAuthorization()
         setupUserLocation()
-        
     }
     
     private func setAnnotation(type: theaterCase) {
@@ -131,7 +130,6 @@ final class MapViewController: UIViewController {
         DispatchQueue.global().async {
             self.mapView.setUserTrackingMode(.follow, animated: true)
         }
-        
     }
     
     private func changeStatusLabel(status: LocationStatus) {

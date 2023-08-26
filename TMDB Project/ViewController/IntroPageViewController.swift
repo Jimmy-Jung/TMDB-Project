@@ -8,16 +8,15 @@
 import UIKit
 
 protocol Dismissable {
-    func dismissVC()
+    func changeRootViewController()
 }
 
-class IntroPageViewController: UIPageViewController {
+final class IntroPageViewController: UIPageViewController {
     
     var introList: [UIViewController] = []
 
-    override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
+    init() {
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
-        
     }
     
     required init?(coder: NSCoder) {
@@ -30,6 +29,10 @@ class IntroPageViewController: UIPageViewController {
         delegate = self
         dataSource = self
         fetchIntroList()
+        setFirstViewController()
+    }
+    
+    private func DoNotShowIntroPage() {
         UM.isLaunched = true
     }
     
@@ -41,9 +44,11 @@ class IntroPageViewController: UIPageViewController {
                 vc.delegate = self
                 vc.closeButton.isHidden = false
             }
-            
             introList.append(vc)
         }
+    }
+    
+    private func setFirstViewController() {
         guard let first = introList.first else {return}
         setViewControllers([first], direction: .forward, animated: true)
     }
@@ -65,6 +70,7 @@ extension IntroPageViewController: UIPageViewControllerDelegate, UIPageViewContr
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return introList.count
     }
+    
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         guard let first = viewControllers?.first, let index = introList.firstIndex(of: first) else { return 0}
         return index
@@ -72,8 +78,14 @@ extension IntroPageViewController: UIPageViewControllerDelegate, UIPageViewContr
 }
 
 extension IntroPageViewController: Dismissable {
-    func dismissVC() {
-        self.dismiss(animated: true)
+    func changeRootViewController() {
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let sceneDelegate = windowScene?.delegate as? SceneDelegate
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "Main") as! UITabBarController
+        sceneDelegate?.window?.rootViewController = vc
+        sceneDelegate?.window?.makeKeyAndVisible()
+        DoNotShowIntroPage()
     }
 }
 

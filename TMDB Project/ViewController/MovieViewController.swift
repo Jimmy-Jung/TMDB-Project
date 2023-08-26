@@ -14,14 +14,6 @@ final class MovieViewController: UIViewController {
     private var movieList: [MovieInfo] = []
     private let networkManager = TMDBNetworkManager.shared
 
-    override func loadView() {
-        super.loadView()
-        UM.isLaunched = false
-        if !UM.isLaunched {
-            let vc = IntroPageViewController()
-            transition(viewController: vc, style: .presentFull)
-        }
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
