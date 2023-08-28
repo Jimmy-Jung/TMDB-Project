@@ -8,46 +8,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--주간 트렌드-->
+        <!--Movie View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MovieViewController" id="BYZ-38-t0r" customClass="MovieViewController" customModule="TMDB_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xa2-sk-UuS">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rcn-Ae-glz">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xa2-sk-UuS" secondAttribute="bottom" id="9Gl-BZ-nuM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xa2-sk-UuS" secondAttribute="trailing" id="EfK-Hz-Glg"/>
-                            <constraint firstItem="xa2-sk-UuS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jkE-qF-kGh"/>
-                            <constraint firstItem="xa2-sk-UuS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yuD-JX-bdz"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="주간 트렌드" id="Phy-Rs-mk9">
-                        <barButtonItem key="leftBarButtonItem" image="list.bullet" catalog="system" id="6om-b7-WwW">
-                            <color key="tintColor" systemColor="labelColor"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="magnifyingglass" catalog="system" id="iqM-iG-gBB">
-                            <color key="tintColor" systemColor="labelColor"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="movieCollectionView" destination="xa2-sk-UuS" id="8wS-Qy-Y5b"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="Phy-Rs-mk9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

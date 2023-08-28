@@ -32,7 +32,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TxP-xC-W2l">
                                         <rect key="frame" x="0.0" y="201" width="280" height="79"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="248" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="C31-Xe-n5r">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="C31-Xe-n5r">
                                                 <rect key="frame" x="20" y="0.0" width="240" height="67"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FZk-39-wOv">

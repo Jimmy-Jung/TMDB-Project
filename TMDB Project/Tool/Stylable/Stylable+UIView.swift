@@ -41,4 +41,10 @@ extension Stylable where Self: UIView {
         self.isHidden = bool
         return self
     }
+    
+    @discardableResult
+    func addSubView(_ view: UIView) -> Self {
+        self.addSubview(view)
+        return self
+    }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MovieViewController: UIViewController {
+final class MovieViewControllerStoryboard: UIViewController {
     private let titleText = "TMDB"
     @IBOutlet weak var movieCollectionView: UICollectionView!
     
@@ -55,7 +55,7 @@ final class MovieViewController: UIViewController {
     }
 }
 
-extension MovieViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MovieViewControllerStoryboard: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movieList.count
     }
@@ -81,7 +81,7 @@ extension MovieViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return headerView
     }
 }
-extension MovieViewController: UICollectionViewDelegateFlowLayout {
+extension MovieViewControllerStoryboard: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
