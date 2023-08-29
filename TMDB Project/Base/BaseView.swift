@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JimmyKit
 
 class BaseView: UIView {
     override init(frame: CGRect) {

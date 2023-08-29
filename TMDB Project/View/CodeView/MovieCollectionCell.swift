@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JimmyKit
 
 final class MovieCollectionCell: BaseCollectionViewCell {
     private lazy var backView: UIView = {
@@ -17,6 +18,7 @@ final class MovieCollectionCell: BaseCollectionViewCell {
         }
         return view
     }()
+
     private lazy var mainStackView = UIStackView(arrangedSubviews: [imageView, bottomView])
         .alignment(.fill)
         .distribution(.fill)
@@ -27,6 +29,7 @@ final class MovieCollectionCell: BaseCollectionViewCell {
             .contentMode(.scaleAspectFill)
             .addSubView(rateStackView)
             .addSubView(clipButton)
+        
         rateStackView.snp.makeConstraints { make in
             make.leading.bottom.equalToSuperview().inset(15)
             make.width.equalTo(80)
@@ -42,11 +45,15 @@ final class MovieCollectionCell: BaseCollectionViewCell {
     lazy var clipButton: UIButton = {
         let config = UIImage.SymbolConfiguration(paletteColors: [.label, .secondaryLabel, .systemBackground])
             .applying(UIImage.SymbolConfiguration(pointSize: 20))
+            
+        
         return ButtonBuilder(.filled)
             .image(UIImage(systemName: "paperclip.circle.fill", withConfiguration: config))
             .baseBackgroundColor(.clear)
             .makeButton()
+            
     }()
+   
     private lazy var rateStackView = UIStackView(arrangedSubviews: [rateTextLabel, rateLabel])
         .axis(.horizontal)
         .alignment(.fill)

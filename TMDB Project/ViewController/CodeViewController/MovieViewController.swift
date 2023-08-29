@@ -19,8 +19,21 @@ final class MovieViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configBackBarButton(title: nil)
+        title = titleText
+        setupBarButtonItem()
         callRequest()
+    }
+    
+
+    @objc func rightBarButtonTapped() {
+        transition(viewController: ProfileViewController(), style: .presentFullNavigation) { vc in
+            vc.title = "프로필 편집"
+        }
+    }
+    
+    private func setupBarButtonItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: SystemImage.makeImage(.personCircleFill), style: .plain, target: self, action: #selector(rightBarButtonTapped))
+        navigationItem.rightBarButtonItem?.tintColor = .label
     }
     
     private func callRequest() {

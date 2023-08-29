@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JimmyKit
 
 class BaseViewController: UIViewController {
     override func viewDidLoad() {
