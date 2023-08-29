@@ -1,3 +1,9 @@
+# SeSAC 8월29일(화) 과제
+CodeBase UI
+
+![profile](https://github.com/Jimmy-Jung/TMDB-Project/assets/115251866/c6cb51bd-11df-49d7-b03a-2c05d815d882)
+
+
 # SeSAC 8월25일(금) 과제
 
 ![Simulator Screen Recording - iPhone 14 - 2023-08-26 at 16 16 26](https://github.com/Jimmy-Jung/TMDB-Project/assets/115251866/8dfc3bc6-cdde-44b2-8b92-d473575e2244)
