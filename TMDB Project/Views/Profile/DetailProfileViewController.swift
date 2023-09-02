@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TitleViewController: BaseViewController {
+final class DetailProfileViewController: BaseViewController {
     let textField = UITextField()
         .attributedPlaceholder(
             "텍스트를 입력해 주세요",

@@ -29,6 +29,8 @@ final class MovieViewController: BaseViewController {
         transition(viewController: ProfileViewController(), style: .presentFullNavigation) { vc in
             vc.title = "프로필 편집"
         }
+        
+        
     }
     
     private func setupBarButtonItem() {

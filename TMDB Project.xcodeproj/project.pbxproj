@@ -32,7 +32,6 @@
 		553DBBB12A86563B000ACEFA /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBBAF2A86563B000ACEFA /* MovieCollectionViewCell.swift */; };
 		553DBBB22A86563B000ACEFA /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553DBBB02A86563B000ACEFA /* MovieCollectionViewCell.xib */; };
 		553DBBB52A865DF2000ACEFA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 553DBBB42A865DF2000ACEFA /* Kingfisher */; };
-		553DBBB82A86625B000ACEFA /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBBB72A86625B000ACEFA /* ReusableViewProtocol.swift */; };
 		553DBBBB2A88C20A000ACEFA /* MovieCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBBB92A88C20A000ACEFA /* MovieCollectionReusableView.swift */; };
 		553DBBBE2A88CE63000ACEFA /* CreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBBBD2A88CE63000ACEFA /* CreditViewController.swift */; };
 		553DBBC22A891450000ACEFA /* CreditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553DBBC12A891450000ACEFA /* CreditTableViewCell.swift */; };
@@ -57,7 +56,7 @@
 		55D7D81D2A9E3E1A00744020 /* Stylable+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7D81C2A9E3E1A00744020 /* Stylable+UIImageView.swift */; };
 		55D7D8202A9E416900744020 /* ProfileEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7D81F2A9E416900744020 /* ProfileEdit.swift */; };
 		55D7D8252A9E55B200744020 /* Stylable+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7D8242A9E55B200744020 /* Stylable+UIBarButtonItem.swift */; };
-		55D7D8272A9E579600744020 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7D8262A9E579500744020 /* TitleViewController.swift */; };
+		55D7D8272A9E579600744020 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7D8262A9E579500744020 /* DetailProfileViewController.swift */; };
 		55E362C72A96172600C332A2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E362C62A96172600C332A2 /* MapViewController.swift */; };
 		55E362C92A963A9000C332A2 /* sampleCode_map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E362C82A963A9000C332A2 /* sampleCode_map.swift */; };
 /* End PBXBuildFile section */
@@ -88,7 +87,6 @@
 		553DBBAC2A864B82000ACEFA /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
 		553DBBAF2A86563B000ACEFA /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		553DBBB02A86563B000ACEFA /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
-		553DBBB72A86625B000ACEFA /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		553DBBB92A88C20A000ACEFA /* MovieCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionReusableView.swift; sourceTree = "<group>"; };
 		553DBBBD2A88CE63000ACEFA /* CreditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditViewController.swift; sourceTree = "<group>"; };
 		553DBBC12A891450000ACEFA /* CreditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditTableViewCell.swift; sourceTree = "<group>"; };
@@ -111,7 +109,7 @@
 		55D7D81C2A9E3E1A00744020 /* Stylable+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UIImageView.swift"; sourceTree = "<group>"; };
 		55D7D81F2A9E416900744020 /* ProfileEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEdit.swift; sourceTree = "<group>"; };
 		55D7D8242A9E55B200744020 /* Stylable+UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stylable+UIBarButtonItem.swift"; sourceTree = "<group>"; };
-		55D7D8262A9E579500744020 /* TitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		55D7D8262A9E579500744020 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
 		55E362C62A96172600C332A2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		55E362C82A963A9000C332A2 /* sampleCode_map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sampleCode_map.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,8 +160,8 @@
 				55D7D81E2A9E411400744020 /* Manager */,
 				553DBBA62A864108000ACEFA /* Models */,
 				553DBBAE2A86521D000ACEFA /* Network */,
-				553DBB9A2A862761000ACEFA /* View */,
-				553DBB9B2A862767000ACEFA /* ViewController */,
+				5562AC182AA3710800CB8EDD /* Views */,
+				55D7D7272A9CE1AB00744020 /* StoryBoard */,
 			);
 			path = "TMDB Project";
 			sourceTree = "<group>";
@@ -180,7 +178,6 @@
 		553DBB9A2A862761000ACEFA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				55D7D7272A9CE1AB00744020 /* CodeView */,
 				553DBB8B2A862742000ACEFA /* Main.storyboard */,
 				553DBB902A862744000ACEFA /* LaunchScreen.storyboard */,
 				550427442A8E621E004E57FA /* OverViewTableViewCell.swift */,
@@ -196,7 +193,6 @@
 		553DBB9B2A862767000ACEFA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				55D7D73C2A9CE61C00744020 /* CodeViewController */,
 				553DBB892A862742000ACEFA /* MovieViewControllerStoryboard.swift */,
 				553DBBBD2A88CE63000ACEFA /* CreditViewController.swift */,
 				550427402A8E492C004E57FA /* RecommendViewController.swift */,
@@ -231,7 +227,6 @@
 		553DBBA92A8643C3000ACEFA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				553DBBB72A86625B000ACEFA /* ReusableViewProtocol.swift */,
 				553DBBC32A891A3A000ACEFA /* UIViewController+Extension.swift */,
 				55B49A6B2A89AF7D00F0F2F3 /* UIImage+Extension.swift */,
 				550427502A911805004E57FA /* UIImageVIew+Extension.swift */,
@@ -258,6 +253,52 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		5562AC142AA3707800CB8EDD /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		5562AC152AA3707C00CB8EDD /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		5562AC162AA3707F00CB8EDD /* Trending */ = {
+			isa = PBXGroup;
+			children = (
+				55D7D7092A9CB51E00744020 /* MovieViewController.swift */,
+				55D7D7282A9CE1D200744020 /* MovieCollectionCell.swift */,
+				553DBBB92A88C20A000ACEFA /* MovieCollectionReusableView.swift */,
+			);
+			path = Trending;
+			sourceTree = "<group>";
+		};
+		5562AC172AA370ED00CB8EDD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				55D7D8262A9E579500744020 /* DetailProfileViewController.swift */,
+				55D7D8112A9DE87500744020 /* ProfileViewController.swift */,
+				55D7D8132A9DE8CF00744020 /* ProfileView.swift */,
+				55D7D8192A9E096500744020 /* ProfileTableViewCell.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5562AC182AA3710800CB8EDD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5562AC172AA370ED00CB8EDD /* Profile */,
+				5562AC162AA3707F00CB8EDD /* Trending */,
+				5562AC152AA3707C00CB8EDD /* Recommend */,
+				5562AC142AA3707800CB8EDD /* Map */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		55D23B692A99A3B90095C70A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,25 +319,13 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		55D7D7272A9CE1AB00744020 /* CodeView */ = {
+		55D7D7272A9CE1AB00744020 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				55D7D7282A9CE1D200744020 /* MovieCollectionCell.swift */,
-				553DBBB92A88C20A000ACEFA /* MovieCollectionReusableView.swift */,
-				55D7D8132A9DE8CF00744020 /* ProfileView.swift */,
-				55D7D8192A9E096500744020 /* ProfileTableViewCell.swift */,
+				553DBB9A2A862761000ACEFA /* View */,
+				553DBB9B2A862767000ACEFA /* ViewController */,
 			);
-			path = CodeView;
-			sourceTree = "<group>";
-		};
-		55D7D73C2A9CE61C00744020 /* CodeViewController */ = {
-			isa = PBXGroup;
-			children = (
-				55D7D7092A9CB51E00744020 /* MovieViewController.swift */,
-				55D7D8112A9DE87500744020 /* ProfileViewController.swift */,
-				55D7D8262A9E579500744020 /* TitleViewController.swift */,
-			);
-			path = CodeViewController;
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 		55D7D81B2A9E3DF100744020 /* JimmyKit */ = {
@@ -408,8 +437,7 @@
 				55D7D70A2A9CB51E00744020 /* MovieViewController.swift in Sources */,
 				55D23B6B2A99A3E20095C70A /* ImageName.swift in Sources */,
 				55D7D8162A9DFE7400744020 /* SystemImage.swift in Sources */,
-				553DBBB82A86625B000ACEFA /* ReusableViewProtocol.swift in Sources */,
-				55D7D8272A9E579600744020 /* TitleViewController.swift in Sources */,
+				55D7D8272A9E579600744020 /* DetailProfileViewController.swift in Sources */,
 				55D7D8252A9E55B200744020 /* Stylable+UIBarButtonItem.swift in Sources */,
 				55D7D8182A9E08AB00744020 /* BaseTableViewCell.swift in Sources */,
 				553DBB8A2A862742000ACEFA /* MovieViewControllerStoryboard.swift in Sources */,
